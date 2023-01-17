@@ -7,6 +7,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
+import GlobalNav from "./components/GlobalNav";
+
 export const meta = () => ({
   charset: "utf-8",
   title: "New Remix App",
@@ -21,6 +23,9 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <header>
+          <GlobalNav />
+        </header>
         <Outlet />
         <ScrollRestoration />
         <Scripts />
