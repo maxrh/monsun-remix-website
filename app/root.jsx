@@ -23,10 +23,16 @@ export default function App() {
                 <Links />
             </head>
             <body>
-                <header>
-                    <GlobalNav />
-                </header>
-                <Outlet />
+                <main className="site-container">
+                    <header className="site-header">
+                        <GlobalNav />
+                    </header>
+                    <div className="site-inner">
+                        <Outlet />
+                    </div>
+                    <footer className="site-footer"></footer>
+                </main>
+
                 <ScrollRestoration />
                 <Scripts />
                 <LiveReload />
