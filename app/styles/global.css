@@ -1,0 +1,8 @@
+ul {
+    background-color: red;
+}
+
+.global-nav a {
+    padding: .5rem 1rem;
+    background: #eee;
+}
