@@ -1,7 +1,3 @@
 export default function Posts() {
-    return (
-      <main>
-        <h1>Posts</h1>
-      </main>
-    );
+    return ( <h1>Posts</h1> );
   }
