@@ -1,37 +1,20 @@
-import { useState, useEffect } from "react";
+import { PortfolioItem } from "./PortfolioItem";
+import { useLoaderData } from '@remix-run/react';
 
-export function PortfolioGrid() {
+export default function PortfolioGrid() {
 
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            const res = new Response(
-                JSON.stringify({ 
-                    title: "Project 1",
-                    description: "This is a project",
-                    image: "This is a project"
-                })
-            );
-            const json = await res.json();
-            setData(json);
-        };
-
-        fetchData();
-        
-    }, []);
-
-    console.log(data);
-
+    const items = useLoaderData();
 
     return ( 
-        <div className="portfolio-grid">
-        
-        {data ? 
-        
-            <p>{data.title}</p> 
-        
-        : <p>Loading...</p>}
+        <div className="pf-grid">
+
+            {items.map((item) => (
+                <div className="pf-grid__item" key={item.id}>
+                    {item.loading ? <p>Loading...</p> : 
+                        <PortfolioItem {...item}/>
+                    }
+                </div>
+            ))}
         
         </div>
     );
