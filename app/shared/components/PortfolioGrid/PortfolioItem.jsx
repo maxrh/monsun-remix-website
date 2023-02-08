@@ -1,9 +1,9 @@
 export function PortfolioItem(item) {
     return ( 
-        <>
+        <div className="pf-grid__item">
             <img src={item.image} alt={item.title} />
             <h3>{item.title}</h3>
             <p>{item.description}</p>
-        </>
+        </div>
     );
 }

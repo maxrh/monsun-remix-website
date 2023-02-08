@@ -17,8 +17,18 @@ export const meta = () => ({
 });
 
 export const links = () => {
-    return [{ rel: "stylesheet", href: styles}];
+    return [
+        { 
+            rel: "stylesheet", 
+            href: styles, 
+            as: "style",
+        },
+        {
+            page: "/"
+        }
+    ];
 };
+
 
 export default function App() {
   return (

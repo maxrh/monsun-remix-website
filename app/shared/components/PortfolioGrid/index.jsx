@@ -1,19 +1,17 @@
 import { PortfolioItem } from "./PortfolioItem";
-import { useLoaderData } from '@remix-run/react';
+import { Suspense } from "react";
 
-export function PortfolioGrid() {
+export function PortfolioGrid({items}) {
 
-    const items = useLoaderData();
+    console.log(items);
 
     return ( 
         <div className="pf-grid">
 
             {items.map((item) => (
-                <div className="pf-grid__item" key={item.id}>
-                    {item.loading ? <p>Loading...</p> : 
-                        <PortfolioItem {...item}/>
-                    }
-                </div>
+                <Suspense fallback={<li>Loading...</li>} key={item.id}>
+                    <PortfolioItem {...item}/>
+                </Suspense>
             ))}
         
         </div>

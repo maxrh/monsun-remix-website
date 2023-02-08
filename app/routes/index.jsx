@@ -1,8 +1,10 @@
+import { json } from "@remix-run/node";
+import { useLoaderData } from '@remix-run/react';
 import { PortfolioGrid } from "~/shared/components/PortfolioGrid";
 
-export async function loader() {
 
-    return [
+export const loader = async () => {
+    return json([
         {   
             id: 1,
             size: 1,
@@ -24,16 +26,18 @@ export async function loader() {
             description: "This is a project",
             image: "https://dummyimage.com/640x360/eee/aaa",
         },
-    ];
+    ]);
 }
 
 export default function Index() {
+
+    const items = useLoaderData();
 
     return (
         <>
             <h1>A remix website</h1>
 
-            <PortfolioGrid />
+            <PortfolioGrid items={items} />
         
         </>
     );
