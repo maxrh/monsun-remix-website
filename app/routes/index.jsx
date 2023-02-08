@@ -12,6 +12,13 @@ export async function loader() {
         },
         {   
             id: 2,
+            size: 3,
+            title: "Project 2",
+            description: "This is a project",
+            image: "https://dummyimage.com/640x360/eee/aaa",
+        },
+        {   
+            id: 3,
             size: 4,
             title: "Project 2",
             description: "This is a project",

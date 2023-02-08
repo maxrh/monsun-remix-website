@@ -1,0 +1,43 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    background-color: red;
+}
+
+.global-nav a {
+    padding: .5rem 1rem;
+    background: #eee;
+}
+
+.pf-grid {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+
+    .pf-grid__item {
+        background-color: #ddd;
+    }
+}

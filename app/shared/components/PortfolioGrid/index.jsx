@@ -1,7 +1,7 @@
 import { PortfolioItem } from "./PortfolioItem";
 import { useLoaderData } from '@remix-run/react';
 
-export default function PortfolioGrid() {
+export function PortfolioGrid() {
 
     const items = useLoaderData();
 
