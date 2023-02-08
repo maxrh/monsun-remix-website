@@ -3,7 +3,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "remix build",
-    "dev": "remix dev",
+    "dev": "concurrently \"npm run sass\" \"remix dev\"",
     "start": "remix-serve build"
   },
   "dependencies": {
@@ -17,7 +17,9 @@
   "devDependencies": {
     "@remix-run/dev": "^1.10.1",
     "@remix-run/eslint-config": "^1.10.1",
-    "eslint": "^8.27.0"
+    "concurrently": "^7.6.0",
+    "eslint": "^8.27.0",
+    "sass": "^1.58.0"
   },
   "engines": {
     "node": ">=14"
