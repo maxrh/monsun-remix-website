@@ -1,7 +1,12 @@
 @import "./_variables.scss";
+@import "./_grid.scss";
+@import "./_header.scss";
+@import "./_hero.scss";
 
 * {
     box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
@@ -10,7 +15,7 @@ html {
 
 body {
     margin: 0;
-    padding: 3rem;
+    padding: $page-margin;
     font-family: $base-font;
     font-size: $base-font-size;
     font-weight: $base-font-weight;
@@ -50,48 +55,6 @@ img {
     max-width: 100%;
 }
 
-.global-nav {
-    display: flex;
-    margin-bottom: 2rem;
-    justify-content: flex-end;
-    font-size: $small-font-size;
-
-    a {
-        padding: 1rem 1rem;
-        margin-right: .5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
-
-.pf-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-    grid-gap: 3rem;
-
-    .pf-grid__item {
-        background-color: $primary-color;
-    }
-
-    .size-1 {
-        grid-column: span 1;
-    }
-
-    .size-2 {
-        grid-column: span 2;
-    }
-
-    .size-3 {
-        grid-column: span 3;
-    }
-
-    .size-4 {
-        grid-column: span 4;
-    }
-}
-
-
 .pf-teaser {
     position: relative;
     overflow: hidden;
@@ -123,16 +86,4 @@ img {
         margin: 0;
         font-size: $small-font-size;
     }
-}
-
-.hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    height: 400px;
-    text-align: center;
-   
-
 }

@@ -1,0 +1,36 @@
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    .logo {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: .5rem;
+
+        .logo-icon {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            float: left;
+            
+        }
+    }
+}
+
+.site-nav {
+    display: flex;
+    justify-content: flex-end;
+    font-size: $small-font-size;
+
+    a {
+        padding: 1rem 1rem;
+        margin-left: .5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

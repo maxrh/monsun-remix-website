@@ -7,7 +7,7 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import GlobalNav from "./shared/components/GlobalNav";
+import Header from "./shared/components/Header";
 import styles from "./styles/global.css";
 
 export const meta = () => ({
@@ -38,9 +38,7 @@ export default function App() {
             <Links />
         </head>
         <body>
-            <header>
-                <GlobalNav />
-            </header>
+            <Header />
             <main>
                 <Outlet />
             </main>

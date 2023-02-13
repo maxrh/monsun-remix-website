@@ -8,6 +8,7 @@ export const loader = async () => {
         {   
             id: 1,
             size: 1,
+            order: 1,
             title: "Project 01",
             description: "Size 1",
             image: "https://dummyimage.com/1440x400/eee/aaa",
@@ -15,6 +16,7 @@ export const loader = async () => {
         {   
             id: 2,
             size: 3,
+            order: 2,
             title: "Project 02",
             description: "Size 3",
             image: "https://dummyimage.com/1440x400/eee/aaa",
@@ -22,6 +24,7 @@ export const loader = async () => {
         {   
             id: 3,
             size: 4,
+            order: 3,
             title: "Project 03",
             description: "Size 4",
             image: "https://dummyimage.com/1440x400/eee/aaa",
@@ -29,6 +32,7 @@ export const loader = async () => {
         {   
             id: 4,
             size: 2,
+            order: 4,
             title: "Project 04",
             description: "Size 2",
             image: "https://dummyimage.com/1440x400/eee/aaa",
@@ -36,6 +40,7 @@ export const loader = async () => {
         {   
             id: 5,
             size: 2,
+            order: 5,
             title: "Project 05",
             description: "Size 2",
             image: "https://dummyimage.com/1440x400/eee/aaa",

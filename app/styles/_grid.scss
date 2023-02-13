@@ -1,0 +1,73 @@
+.pf-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-gap: $block-margin;
+
+    .pf-grid__item {
+        background-color: $primary-color;
+    }
+
+    .size-1 {
+        grid-column: span 1;
+    }
+
+    .size-2 {
+        grid-column: span 2;
+    }
+
+    .size-3 {
+        grid-column: span 3;
+    }
+
+    .size-4 {
+        grid-column: span 4;
+    }
+
+    .order-1 {
+        order: 1;
+    }
+
+    .order-2 {
+        order: 2;
+    }
+
+    .order-3 {
+        order: 3;
+    }
+
+    .order-4 {
+        order: 4;
+    }
+
+    .order-5 {
+        order: 5;
+    }
+
+    .order-6 {
+        order: 6;
+    }
+
+    .order-7 {
+        order: 7;
+    }
+
+    .order-8 {
+        order: 8;
+    }
+
+    .order-9 {
+        order: 9;
+    }
+
+    .order-10 {
+        order: 10;
+    }
+
+    .order-11 {
+        order: 11;
+    }
+
+    .order-12 {
+        order: 12;
+    }
+}

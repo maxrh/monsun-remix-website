@@ -1,0 +1,12 @@
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: $page-margin;
+    margin-bottom: $page-margin;
+    height: calc(100vh - (48px + 2rem + $page-margin * 2));
+    text-align: center;
+   
+    background-color: #eee;
+}
