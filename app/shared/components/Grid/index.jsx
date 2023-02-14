@@ -1,19 +1,19 @@
-import { PortfolioItem } from "./PortfolioItem";
+import { GridItem } from "./GridItem";
 import { Suspense } from "react";
 
-export function PortfolioGrid({items}) {
+export function Grid({items}) {
 
     console.log(items);
 
     return ( 
-        <div className="pf-grid">
+        <section className="grid">
 
             {items.map((item) => (
                 <Suspense fallback={<li>Loading...</li>} key={item.id}>
-                    <PortfolioItem {...item}/>
+                    <GridItem {...item}/>
                 </Suspense>
             ))}
         
-        </div>
+        </section>
     );
 }

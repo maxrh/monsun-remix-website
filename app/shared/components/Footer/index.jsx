@@ -1,10 +1,10 @@
 import { Link } from "@remix-run/react";
 import logo from "~/images/monsun_logo_full.svg";
 
-export default function Header() {
+export default function Footer() {
     return ( 
 
-        <header className="site-header">
+        <footer className="site-footer">
 
             <Link to="/" prefetch="intent" className="logo">
                 <img src={logo} className="logo-icon" alt="logo" />
@@ -16,7 +16,7 @@ export default function Header() {
                 <Link to="/contact" prefetch="intent">Contact</Link>
             </nav>
 
-        </header>
+        </footer>
         
     );
 }

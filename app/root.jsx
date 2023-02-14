@@ -8,6 +8,7 @@ import {
 } from "@remix-run/react";
 
 import Header from "./shared/components/Header";
+import Footer from "./shared/components/Footer";
 import styles from "./styles/global.css";
 
 export const meta = () => ({
@@ -39,10 +40,10 @@ export default function App() {
         </head>
         <body>
             <Header />
-            <main>
+            <main className="main">
                 <Outlet />
             </main>
-            <footer></footer>
+            <Footer />
             <ScrollRestoration />
             <Scripts />
             <LiveReload />

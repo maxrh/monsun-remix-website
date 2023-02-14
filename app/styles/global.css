@@ -1,67 +1,116 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
-.pf-grid {
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+.grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(6, minmax(100px, 1fr));
+  grid-gap: 0rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin-bottom: 4rem;
 }
-.pf-grid .pf-grid__item {
-  background-color: #FF3131;
+.grid--tile {
+  position: relative;
+  background-color: #333;
+  border: 2rem solid #111;
+  outline: 1px solid #222;
 }
-.pf-grid .size-1 {
+.grid--tile__image {
+  object-fit: cover;
+  width: 100%;
+  height: 400px;
+  float: left;
+  opacity: 0.25;
+  mix-blend-mode: multiply;
+}
+.grid--tile__overlay {
+  position: absolute;
+  bottom: 0;
+  left: -2rem;
+  width: 75%;
+  color: #fff;
+  margin-bottom: 3rem;
+  border-left: 3rem solid rgba(230, 69, 69, 0.75);
+  padding: 1rem 1.8rem;
+}
+.grid--tile__title {
+  margin: 0 0 1rem;
+  padding-bottom: 1rem;
+  padding-right: 3rem;
+  font-weight: 700;
+  display: inline-block;
+  position: relative;
+  border-bottom: 1px solid #555;
+}
+.grid--tile__desc {
+  margin: 0;
+  font-size: 1.2rem;
+}
+.grid .size-1 {
   grid-column: span 1;
 }
-.pf-grid .size-2 {
+.grid .size-2 {
   grid-column: span 2;
 }
-.pf-grid .size-3 {
+.grid .size-3 {
   grid-column: span 3;
 }
-.pf-grid .size-4 {
+.grid .size-4 {
   grid-column: span 4;
 }
-.pf-grid .order-1 {
+.grid .size-5 {
+  grid-column: span 5;
+}
+.grid .size-6 {
+  grid-column: span 6;
+}
+.grid .order-1 {
   order: 1;
 }
-.pf-grid .order-2 {
+.grid .order-2 {
   order: 2;
 }
-.pf-grid .order-3 {
+.grid .order-3 {
   order: 3;
 }
-.pf-grid .order-4 {
+.grid .order-4 {
   order: 4;
 }
-.pf-grid .order-5 {
+.grid .order-5 {
   order: 5;
 }
-.pf-grid .order-6 {
+.grid .order-6 {
   order: 6;
 }
-.pf-grid .order-7 {
+.grid .order-7 {
   order: 7;
 }
-.pf-grid .order-8 {
+.grid .order-8 {
   order: 8;
 }
-.pf-grid .order-9 {
+.grid .order-9 {
   order: 9;
 }
-.pf-grid .order-10 {
+.grid .order-10 {
   order: 10;
 }
-.pf-grid .order-11 {
+.grid .order-11 {
   order: 11;
 }
-.pf-grid .order-12 {
+.grid .order-12 {
   order: 12;
 }
 
+.site-footer,
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 2rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 4rem;
+  padding-top: 4rem;
 }
+.site-footer .logo,
 .site-header .logo {
   width: 150px;
   display: flex;
@@ -69,6 +118,7 @@
   justify-content: center;
   margin-right: 0.5rem;
 }
+.site-footer .logo .logo-icon,
 .site-header .logo .logo-icon {
   width: 100%;
   height: 100%;
@@ -79,11 +129,11 @@
 .site-nav {
   display: flex;
   justify-content: flex-end;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 .site-nav a {
-  padding: 1rem 1rem;
-  margin-left: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -95,9 +145,8 @@
   align-items: center;
   padding: 4rem;
   margin-bottom: 4rem;
-  height: calc(100vh - (48px + 2rem + 8rem));
+  height: calc(50vh - 101px);
   text-align: center;
-  background-color: #eee;
 }
 
 * {
@@ -112,11 +161,13 @@ html {
 
 body {
   margin: 0;
-  padding: 4rem;
+  padding: 0;
   font-family: "Lato", sans-serif;
   font-size: 1.8rem;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.5;
+  background-color: #111;
+  color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -153,7 +204,7 @@ h6 {
 
 a {
   text-decoration: none;
-  color: #333;
+  color: #fff;
 }
 a:hover {
   text-decoration: underline;
@@ -161,35 +212,6 @@ a:hover {
 
 img {
   max-width: 100%;
-}
-
-.pf-teaser {
-  position: relative;
-  overflow: hidden;
-}
-.pf-teaser .pf-teaser__image {
-  object-fit: cover;
-  width: 100%;
-  height: 400px;
-  float: left;
-  opacity: 0.25;
-  mix-blend-mode: multiply;
-}
-.pf-teaser .pf-teaser__overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 2rem;
-  color: #fff;
-}
-.pf-teaser .pf-teaser__title {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.075rem;
-}
-.pf-teaser .pf-teaser__desc {
-  margin: 0;
-  font-size: 1.6rem;
 }
 
 /*# sourceMappingURL=global.css.map */
