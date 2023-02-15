@@ -3,7 +3,7 @@ import { Suspense } from "react";
 
 export function Grid({items}) {
 
-    console.log(items);
+    
 
     return ( 
         <section className="grid">

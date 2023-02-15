@@ -55,3 +55,31 @@ a {
 img {
     max-width: 100%;
 }
+
+
+.page-transition {
+    transition-property: all;
+    transition-timing-function: ease-in;
+    transition-duration: 300ms;
+
+
+    filter: grayscale(1);
+
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+
+    opacity: .5;
+    transform: scale(0.95);
+}
+
+.main {
+    transition-property: all;
+    transition-timing-function: ease-out;
+    transition-duration: 300ms;
+
+}
+    
