@@ -8,6 +8,7 @@ import {
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useLocation, useOutlet } from "react-router-dom";
+import ProjectsContextProvider from "./context/ProjectsContext";
 
 import Header from "./shared/components/Header";
 import Footer from "./shared/components/Footer";
@@ -35,9 +36,8 @@ export const links = () => {
 
 
 export default function App() {
-    const outlet = useOutlet();
     const location = useLocation();
-    
+    const outlet = useOutlet();
     
     return (
         <html lang="en">
@@ -47,18 +47,20 @@ export default function App() {
             </head>
             <body>
                 <Header />
-
-                    <AnimatePresence mode="wait" initial={false}>
-                        <motion.main 
-                            key={location.pathname} 
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: .5 }} 
-                        >
-                            {outlet}
-                        </motion.main>
-                    </AnimatePresence>
+                    <ProjectsContextProvider>
+                        <AnimatePresence mode="wait" initial={false}>
+                            <motion.main 
+                                key={location.pathname} 
+                                initial={{ opacity: 0, scale: 0.95, filter: "grayscale(100%)" }}
+                                animate={{ opacity: 1, scale: 1, filter: "grayscale(0)" }}
+                                exit={{ opacity: 0, scale: 0.95, filter: "grayscale(100%)"  }}
+                                transition={{ duration: .2 }} 
+                                
+                            >
+                                {outlet}
+                            </motion.main>
+                        </AnimatePresence>
+                    </ProjectsContextProvider>
                 <Footer />
                 <ScrollRestoration />
                 <Scripts />

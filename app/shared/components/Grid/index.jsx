@@ -1,5 +1,4 @@
 import { GridItem } from "./GridItem";
-import { Suspense } from "react";
 
 export function Grid({items}) {
 
@@ -7,9 +6,7 @@ export function Grid({items}) {
         <section className="grid">
 
             {items?.map((item) => (
-                <Suspense fallback={<li>Loading...</li>} >
-                    <GridItem {...item} key={item.id}/>
-                </Suspense>
+                <GridItem {...item} key={item.id}/>
             ))}
         
         </section>
