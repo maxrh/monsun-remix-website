@@ -11,9 +11,9 @@ export default function Header() {
             </Link>
             
             <nav className="site-nav" aria-label="Main">
-                <Link to="/" prefetch="intent">Home</Link>{" "}
-                <Link to="/about" prefetch="intent">About</Link>{" "}
-                <Link to="/contact" prefetch="intent">Contact</Link>
+                <Link to="/" >Home</Link>{" "}
+                <Link to="/about" >About</Link>{" "}
+                <Link to="/contact" >Contact</Link>
             </nav>
 
         </header>

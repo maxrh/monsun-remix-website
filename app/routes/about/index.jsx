@@ -1,5 +1,14 @@
+import { Hero } from "~/shared/components/Hero";
+
 const About = () => {
-    return ( <h1>This is about page</h1> );
+
+    return ( 
+
+        <>
+            <Hero text={"This is about page"}/>
+        </>
+        
+    );
 }
  
 export default About;

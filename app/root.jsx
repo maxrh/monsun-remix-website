@@ -2,16 +2,16 @@ import {
     Links,
     LiveReload,
     Meta,
-    Outlet,
     Scripts,
     ScrollRestoration,
-    useTransition,
 } from "@remix-run/react";
+
+import { AnimatePresence, motion } from "framer-motion";
+import { useLocation, useOutlet } from "react-router-dom";
 
 import Header from "./shared/components/Header";
 import Footer from "./shared/components/Footer";
 import styles from "./styles/global.css";
-
 
 export const meta = () => ({
     charset: "utf-8",
@@ -32,13 +32,13 @@ export const links = () => {
     ];
 };
 
+
+
 export default function App() {
-    const transitions = useTransition();
-    const pendingLocation = transitions.state === "loading";
-
-
-    console.log(pendingLocation);
-
+    const outlet = useOutlet();
+    const location = useLocation();
+    
+    
     return (
         <html lang="en">
             <head>
@@ -47,13 +47,18 @@ export default function App() {
             </head>
             <body>
                 <Header />
-                <main className={
-                    pendingLocation
-                    ? "main page-transition"
-                    : "main"
-                }>
-                    <Outlet />
-                </main>
+
+                    <AnimatePresence mode="wait" initial={false}>
+                        <motion.main 
+                            key={location.pathname} 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: .5 }} 
+                        >
+                            {outlet}
+                        </motion.main>
+                    </AnimatePresence>
                 <Footer />
                 <ScrollRestoration />
                 <Scripts />
