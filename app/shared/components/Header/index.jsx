@@ -1,6 +1,4 @@
 import { Link } from "@remix-run/react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMessageLines, faHouseBlank, faCircleInfo } from '@fortawesome/pro-solid-svg-icons'
 import logo from "~/images/monsun_logo_full.svg";
 
 export default function Header() {

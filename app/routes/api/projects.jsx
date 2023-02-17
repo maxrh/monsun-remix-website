@@ -8,7 +8,7 @@ export const loader = async () => {
             order: 1,
             title: "Project 01",
             description: "Size 1",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=1",
         },
         {   
             id: 2,
@@ -16,7 +16,7 @@ export const loader = async () => {
             order: 2,
             title: "Project 02",
             description: "Size 3",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=2",
         },
         {   
             id: 3,
@@ -24,7 +24,7 @@ export const loader = async () => {
             order: 3,
             title: "Project 03",
             description: "Size 4",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=3",
         },
         {   
             id: 4,
@@ -32,7 +32,7 @@ export const loader = async () => {
             order: 4,
             title: "Project 04",
             description: "Size 1",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=4",
         },
         {   
             id: 5,
@@ -40,7 +40,7 @@ export const loader = async () => {
             order: 5,
             title: "Project 05",
             description: "Size 3",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=5",
         },
         {   
             id: 6,
@@ -48,7 +48,7 @@ export const loader = async () => {
             order: 6,
             title: "Project 06",
             description: "Size 4",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=6",
         },
        
         {   
@@ -57,7 +57,7 @@ export const loader = async () => {
             order: 7,
             title: "Project 07",
             description: "Size 4",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=7",
         },
         {   
             id: 8,
@@ -65,7 +65,7 @@ export const loader = async () => {
             order: 8,
             title: "Project 08",
             description: "Size 2",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=8",
         },
         {   
             id: 9,
@@ -73,7 +73,7 @@ export const loader = async () => {
             order: 9,
             title: "Project 09",
             description: "Size 2",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=9",
         },
         {   
             id: 10,
@@ -81,7 +81,7 @@ export const loader = async () => {
             order: 10,
             title: "Project 10",
             description: "Size 2",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=10",
         },
         {   
             id: 11,
@@ -89,7 +89,7 @@ export const loader = async () => {
             order: 11,
             title: "Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries",
             description: "Size 2",
-            image: "https://dummyimage.com/1440x400/eee/aaa",
+            image: "https://picsum.photos/1440/400?random=11",
         },
     ]);
 }

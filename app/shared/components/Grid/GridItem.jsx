@@ -19,7 +19,7 @@ export function GridItem(item) {
             }}
         >
 
-            <img src={imagePlaceholder} alt={item.title} className="grid--tile__image"/>
+            <img src={item.image} alt={item.title} className="grid--tile__image"/>
             <div className="grid--tile__overlay">
                 <h5 className="grid--tile__title">{item.title}</h5>
                 <p className="grid--tile__desc">Size {item.size} / Order {item.order}</p>
