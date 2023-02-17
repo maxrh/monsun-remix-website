@@ -10,7 +10,7 @@ export default function Index() {
 
     return (
         <>
-            <Hero text={"A remix website"}/>
+            <Hero text={"Dit kreative kooperativ af journalister, grafikere, fotografer & web-udviklere"}/>
             <Grid items={items} />
         </>
     );

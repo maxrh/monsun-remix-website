@@ -2,11 +2,12 @@
 .site-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-left: $page-margin;
     padding-right: $page-margin;
     padding-bottom: $page-margin;
     padding-top: $page-margin;
+    position: relative;
 
     .logo {
         width: 150px;
@@ -27,12 +28,41 @@
 
 .site-nav {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
     font-size: $small-font-size;
+    font-weight: 400;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: $page-margin;
+    z-index: 1;
 
     a {
-        margin-left: 1rem;
-        margin-right: 1rem;
+        margin-left: 3rem;
+        margin-right: 0rem;
+        margin-bottom: .6rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        font-size: 1.5rem;
+        color: #444;
+        padding: 0.2rem 3rem;
+        width: 200px;
+        border-right: .4rem solid $primary-color;
+
+        &:hover {
+            text-decoration: none;
+            color: #222;
+        }
+    }
+
+    .svg-inline--fa {
+        margin-left: 2rem;
+        color: $primary-color;
+        width: 1.8rem;
+        height: 1.8rem;
         display: flex;
         align-items: center;
         justify-content: center;

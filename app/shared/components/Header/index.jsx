@@ -1,4 +1,6 @@
 import { Link } from "@remix-run/react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMessageLines, faHouseBlank, faCircleInfo } from '@fortawesome/pro-solid-svg-icons'
 import logo from "~/images/monsun_logo_full.svg";
 
 export default function Header() {
@@ -11,9 +13,10 @@ export default function Header() {
             </Link>
             
             <nav className="site-nav" aria-label="Main">
-                <Link to="/" >Home</Link>{" "}
-                <Link to="/about" >About</Link>{" "}
-                <Link to="/contact" >Contact</Link>
+                <Link to="/" aria-label="Home">Home </Link>{" "}
+                <Link to="/contact" aria-label="Contact">Get in touch </Link>
+                <Link to="/about" aria-label="About">About us </Link>{" "}
+
             </nav>
 
         </header>

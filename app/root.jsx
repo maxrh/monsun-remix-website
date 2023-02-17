@@ -48,13 +48,14 @@ export default function App() {
             <body>
                 <Header />
                     <ProjectsContextProvider>
-                        <AnimatePresence mode="wait" initial={false}>
+                        <AnimatePresence mode="wait">
                             <motion.main 
                                 key={location.pathname} 
                                 initial={{ opacity: 0, scale: 0.95, filter: "grayscale(100%)" }}
                                 animate={{ opacity: 1, scale: 1, filter: "grayscale(0)" }}
                                 exit={{ opacity: 0, scale: 0.95, filter: "grayscale(100%)"  }}
                                 transition={{ duration: .2 }} 
+                                className="main"
                                 
                             >
                                 {outlet}
