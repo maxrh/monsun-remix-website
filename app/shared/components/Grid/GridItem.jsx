@@ -1,6 +1,6 @@
 import { useInView } from "framer-motion";
 import { useRef } from 'react';
-import imagePlaceholder from "~/images/joey-huang-small-unsplash.jpg";
+import { IoExpandOutline } from "react-icons/io5";
 
 export function GridItem(item) {
 
@@ -18,8 +18,10 @@ export function GridItem(item) {
                 transition: `all .5s ease-in-out ${delay}s`,
             }}
         >
-
-            <img src={item.image} alt={item.title} className="grid--tile__image"/>
+            <div className="grid--tile__image-wrapper">
+                <IoExpandOutline className="grid--tile__icon" />
+                <img src={item.image} alt={item.title} className="grid--tile__image"/>
+            </div>
             <div className="grid--tile__overlay">
                 <h5 className="grid--tile__title">{item.title}</h5>
                 <p className="grid--tile__desc">Size {item.size} / Order {item.order}</p>

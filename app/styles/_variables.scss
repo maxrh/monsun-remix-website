@@ -1,23 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+@import url("https://use.typekit.net/nyz7ptq.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 
 $page-margin: 4rem;
 $block-margin: 3rem;
 
 // Colors
 
-$primary-color: #d74545;
+$primary-color: rgba(251, 32, 59, .75);
 $secondary-color: #222;
 
-$body-bg: #eee;
+$body-bg: #f2f2f2;
 
 // Fonts
 
-$base-font: 'Lato', sans-serif;
-$headings-font: $base-font;
+$base-font: 'Roboto', sans-serif;
+$headings-font: 'neue-haas-grotesk-display', sans-serif;
 $code-font: 'IBM Plex Mono', monospace;
 
-$base-font-weight: 300;
+$base-font-weight: 400;
 $heading-font-weight: 900;
 
 // Font Sizes

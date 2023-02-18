@@ -51,9 +51,9 @@ export default function App() {
                         <AnimatePresence mode="wait">
                             <motion.main 
                                 key={location.pathname} 
-                                initial={{ y: -100, opacity: 0, scale: 1, filter: "grayscale(100%)" }}
-                                animate={{ y: 0, opacity: 1, scale: 1, filter: "grayscale(0)" }}
-                                exit={{ y: 50, opacity: 0, scale: .9, filter: "grayscale(100%)"  }}
+                                initial={{ y: 200, opacity: 0, scale: .95 }}
+                                animate={{ y: 0, opacity: 1, scale: 1 }}
+                                exit={{ y: 200, opacity: 0, scale: .95  }}
                                 transition={{ duration: .2 }} 
                                 className="main"
                                 

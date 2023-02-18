@@ -1,74 +1,152 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(6, minmax(100px, 1fr));
-    grid-gap: .1rem;
-    margin-bottom: $page-margin;
+    grid-gap: 0rem;
+    padding: $page-margin;
+    background-color: transparent;
+
 
     &--tile {
         position: relative;
-        background-color: #ddd;
-        border: 2rem solid $body-bg;
-    
-        &__image {
-            object-fit: cover;
-            width: 100%;
-            height: 400px;
-            float: left;
-            opacity: 1;
-        }
-    
-        &__overlay {
-            position: absolute;
-            display: inline-block;
-            bottom: 4rem;
-            left: -1rem;
-            max-width: 70%;
-            margin-bottom: 0rem;
-            padding: 2rem 4rem 2rem 5rem;
-            background-color: rgba(#eee, 1);
-            z-index: 10;
+        padding: 2rem;
+        background-color: transparent;
+        cursor: pointer;
 
-            &::before {
-                content: '';
-                position: absolute;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width:  0 0 2rem 2rem;
-                border-color:  transparent transparent rgba($primary-color, .5) transparent;
-                top: 0rem;
-                left: -1rem;
+        &__image-wrapper {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: #222;
+            
+            box-shadow: .75rem .75rem 0 rgba($primary-color, .2);
+            transition: all .6s ease-in-out; 
+
+            img {
+                height: 100%;
+                float: left;
+                height: 400px;
+                opacity: 1;
+                object-position: center;
+                object-fit: cover;
+                opacity: .5;
+                transition: all .6s ease-in-out;
 
             }
 
             &::after {
                 content: '';
                 position: absolute;
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width:  2rem 2rem 0 0 ;
-                border-color:  rgba($primary-color, 1) transparent transparent transparent;
-                top: 0rem;
-                left: 1rem;
+                display: block;
+                width: 100%;
+                height: 100%;
+                background: repeating-linear-gradient(
+                    -45deg,
+                    rgb(#f2f2f2, 1),
+                    rgba(#f2f2f2, 1) 3px,
+                    rgba(#ccc, 1) 3px,
+                    rgba(#ccc, 1) 6px
+                );
+                bottom: -1.4rem;
+                right: -1.4rem;
+                z-index: -99;
+
             }
+            
+        }
+    
+        &__overlay {
+            position: absolute;
+            display: inline-block;
+            bottom: 6rem;
+            left: 0rem;
+            right: 4rem;
+            margin-bottom: 0rem;
+            padding: 2.5rem 5rem 2.5rem 3rem;
+            z-index: 10;
+            border-left: 4rem solid rgba(#0044ff, 0.9);
+            color: #f2f2f2;
+            transition: all .3s ease-in-out;
+
+
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     width: 0;
+            //     height: 0;
+            //     border-style: solid;
+            //     border-width:  0 0 2rem 2rem;
+            //     border-color:  transparent transparent rgba(12, 47, 251, .1) transparent;
+            //     top: 0rem;
+            //     left: -1rem;
+
+            // }
+
+            // &::after {
+            //     content: '';
+            //     position: absolute;
+            //     width: 0;
+            //     height: 0;
+            //     border-style: solid;
+            //     border-width:  2rem 2rem 0 0 ;
+            //     border-color:  rgba($primary-color, .3) transparent transparent transparent;
+            //     top: 0rem;
+            //     left: 1rem;
+            // }
 
           
         }
     
         &__title {
-            margin: 0 0 .4rem 0;
-            font-weight: 900;
+            margin: 0 0 .8rem 0;
+            font-weight: 700;
             position: relative;
-            font-size: 1.8rem;
-            letter-spacing: 0.025rem;
+            font-size: 2rem;
+            line-height: 1.2;
+            font-family: $base-font;
+
         }
     
         &__desc {
             margin: 0;
             font-size: 1.1rem;
-            color: #888;
+            color: #eee;
             font-weight: 400;
+        }
+
+        &__icon {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            width: 2rem;
+            height: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all .3s ease-in-out;
+            color: #f2f2f2;
+            z-index: 1;
+            &:hover {
+                background-color: rgba(243, 202, 207, 0.8);
+            }
+        }
+
+        &:hover {
+
+            .grid--tile__overlay {
+                opacity: 0;
+                transform: translateX(-2rem);
+                transition: all .3s ease-in-out;
+            }
+
+            .grid--tile__image {
+                opacity: 1;
+                transition: all .6s ease-in-out;
+            }
+
+            .grid--tile__image-wrapper {
+                box-shadow: .75rem .75rem 0 rgba(12, 47, 251, 0.5);
+                transition: all .6s ease-in-out; 
+            }
         }
     }
 
