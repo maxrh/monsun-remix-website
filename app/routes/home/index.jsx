@@ -1,17 +1,12 @@
-import { Hero } from "~/shared/components/Hero";
 
-export const meta = () => ({
-    title: "Contact | Monsun",
-    description: "The Contact page of Monsun",
-});
 
-const Contact = () => {
+const Home = () => {
 
     return ( 
         <>
             <article className="page">
                 <header className="page-header">
-                    <code className="page-prefix">{"<ContactPage />"}</code>
+                    <code className="page-prefix">{"<HomePage />"}</code>
                     <h1 className="page-title">Pellentesque massa placerat duis ultricies lacus sed turpis</h1>
                     <p className="page-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </header>
@@ -23,4 +18,4 @@ const Contact = () => {
     );
 }
  
-export default Contact;
+export default Home;

@@ -16,24 +16,14 @@ import styles from "./styles/global.css";
 
 export const meta = () => ({
     charset: "utf-8",
-    title: "New Remix App",
+    title: "Monsun",
+    description: "Welcome to Monsun!",
     viewport: "width=device-width,initial-scale=1",
 });
 
 export const links = () => {
-    return [
-        { 
-            rel: "stylesheet", 
-            href: styles, 
-            as: "style",
-        },
-        {
-            page: "/"
-        }
-    ];
+    return [{ rel: "stylesheet", href: styles, as: "style" }];
 };
-
-
 
 export default function App() {
     const location = useLocation();
@@ -47,21 +37,21 @@ export default function App() {
             </head>
             <body>
                 <Header />
-                    <ProjectsContextProvider>
-                        <AnimatePresence mode="wait">
-                            <motion.main 
-                                key={location.pathname} 
-                                initial={{ y: 200, opacity: 0, scale: .95 }}
-                                animate={{ y: 0, opacity: 1, scale: 1 }}
-                                exit={{ y: 200, opacity: 0, scale: .95  }}
-                                transition={{ duration: .2 }} 
-                                className="main"
+                <ProjectsContextProvider>
+                    <AnimatePresence mode="wait">
+                        <motion.main 
+                            key={location.pathname} 
+                            initial={{ y: 200, opacity: 0, scale: .95 }}
+                            animate={{ y: 0, opacity: 1, scale: 1 }}
+                            exit={{ y: 200, opacity: 0, scale: .95  }}
+                            transition={{ duration: .2 }} 
+                            className="main"
                                 
-                            >
-                                {outlet}
-                            </motion.main>
-                        </AnimatePresence>
-                    </ProjectsContextProvider>
+                        >
+                            {outlet}
+                        </motion.main>
+                    </AnimatePresence>
+                </ProjectsContextProvider>
                 <Footer />
                 <ScrollRestoration />
                 <Scripts />

@@ -1,12 +1,22 @@
+import { getProjects } from "~/api/projects"
+import { useLoaderData } from "@remix-run/react"
+
 import { Grid } from "~/shared/components/Grid";
-import { Hero } from "~/shared/components/Hero";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ProjectsContext } from "~/context/ProjectsContext";
+
+export const loader = async () => {
+    return getProjects();
+}
 
 export default function Index() {
 
-    const { projectItems } = useContext(ProjectsContext);
-    const items = projectItems;
+    const { projectItems, setProjectItems } = useContext(ProjectsContext);
+    const projects = useLoaderData()
+    
+    useEffect(() => {
+        setProjectItems(projects);
+    }, [setProjectItems]);
 
     return (
         <article className="page">
@@ -16,7 +26,8 @@ export default function Index() {
                 <p className="page-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </header>
 
-            <Grid items={items} />
+            
+            <Grid items={projectItems} />
         </article>
     );
 }
