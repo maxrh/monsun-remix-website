@@ -1,6 +1,5 @@
 import { getProjects } from "~/api/projects"
 import { useLoaderData } from "@remix-run/react"
-
 import { Grid } from "~/shared/components/Grid";
 import { useContext, useEffect } from "react";
 import { ProjectsContext } from "~/context/ProjectsContext";
