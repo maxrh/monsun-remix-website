@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link, NavLink } from "@remix-run/react";
 import logo from "~/images/monsun_logo_full.svg";
 
 export default function Header() {
@@ -12,12 +12,10 @@ export default function Header() {
             </Link>
             
             <nav className="site-nav" aria-label="Main">
-                <Link to="/" aria-label="Home">Home </Link>{" "}
-                <Link to="/projects" aria-label="Projects">Projects </Link>
-
-                <Link to="/contact" aria-label="Contact">Get in touch </Link>
-                <Link to="/about" aria-label="About">About us </Link>{" "}
-
+                <NavLink to="/" className="nav-item" aria-label="Home">Home</NavLink>{" "}
+                <NavLink to="/projects" className="nav-item" aria-label="Projects">Projects </NavLink>
+                <NavLink to="/contact" className="nav-item" aria-label="Contact">Get in touch </NavLink>
+                <NavLink to="/about" className="nav-item" aria-label="About">About us </NavLink>{" "}
             </nav>
 
         </header>

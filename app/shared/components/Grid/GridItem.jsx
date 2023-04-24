@@ -26,8 +26,6 @@ export function GridItem(item) {
                     <h5 className="grid--tile__title">{item.title}</h5>
                     <p className="grid--tile__desc">Size {item.size} / Order {item.order}</p>
                 </div>
-            
-            
         </Link>
     );
 }
