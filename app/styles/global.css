@@ -213,7 +213,7 @@
   padding: 0.2rem 3rem;
   width: 200px;
   border-right: 0.4rem solid rgba(251, 32, 59, 0.75);
-  transition: border-right, color 0.3s ease-in-out;
+  transition: border-right 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .site-nav .nav-item:hover {
   text-decoration: none;

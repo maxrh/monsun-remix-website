@@ -58,7 +58,7 @@
         padding: 0.2rem 3rem;
         width: 200px;
         border-right: .4rem solid $primary-color;
-        transition: border-right, color .3s ease-in-out;
+        transition: border-right .3s ease-in-out, color .3s ease-in-out;
 
         &:hover {
             text-decoration: none;
